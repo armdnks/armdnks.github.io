@@ -114,22 +114,22 @@ input[type='submit'] {
 .menu .footer {
   width: 100%;
   bottom: 30px;
-  position: absolute;
+  margin-top: 100px;
 }
 
 .menu .footer-content {
   width: 100%;
   display: grid;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
-.menu .footer a {
+.menu .footer-content a {
   color: #fff;
   cursor: pointer;
-  margin: 5px 0;
+  line-height: 30px;
 }
 
-.menu .footer a:hover {
+.menu .footer-content a:hover {
   font-weight: 600;
 }
 
