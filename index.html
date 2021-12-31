@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArmadanKS Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- MENU -------------- -->
+      <div class="menu">
+        <img src="./img/menu.svg" alt="menu button" class="menu-btn" />
+        <div class="menu-content">
+          <h1 class="title">image gallery <br /></h1>
+          <div class="filter">
+            <!-- filter text -->
+            <span class="filter-text current" data-filter="all">All</span>
+          </div>
+          <div class="about">
+            <h3 class="title">about</h3>
+            <p class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed explicabo aspernatur nihil error necessitatibus!</p>
+          </div>
+          <div class="contact">
+            <h3 class="title">contact</h3>
+            <form action="">
+              <label for="name">name</label>
+              <input type="text" id="name" name="name" />
+              <label for="name">message</label>
+              <textarea name="message" id="name" cols="30" rows="5"></textarea>
+              <input type="submit" class="send-message-cta" value="send message" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALLERY -------------- -->
+      <div class="gallery">
+        <div class="gallery-content">
+          <!-- <div class="image" data-item="images.brand">
+            <span><img src="./img/cover/...jpg" alt="Brand | Year | Type"></span>
+          </div> -->
+        </div>
+      </div>
+      <div class="modal">
+        <div class="modal-content">
+          <span><img src="" alt="" class="modal-img" /></span>
+          <p class="modal-title"></p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

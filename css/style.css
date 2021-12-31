@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+  font-weight: 400;
+  font-size: 10pt;
+  letter-spacing: 1pt;
+}
+
+body {
+  width: 100vw;
+  background-color: black;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* MENU ----------------- */
+
+.menu {
+  background-color: black;
+  width: calc(100% / 5);
+  height: 100%;
+  color: white;
+  padding: 20px;
+  overflow: auto;
+}
+
+.menu .menu-btn {
+  display: none;
+}
+
+.menu h1,
+.menu .about,
+.menu .title,
+.menu .body,
+.menu .contact {
+  margin-bottom: 10px;
+}
+
+.menu h1 {
+  font-size: 15pt;
+  font-weight: 600;
+}
+
+.menu .title {
+  font-size: 12pt;
+  font-weight: 600;
+  padding-bottom: 7px;
+  margin: 15px 0;
+  border-bottom: 1px solid #ffff;
+}
+
+.menu .body {
+  font-size: 10pt;
+  line-height: 20pt;
+}
+
+.menu .filter {
+  display: grid;
+  margin: 20px 0;
+}
+
+.menu .filter .filter-text {
+  cursor: pointer;
+  padding: 12px 20px;
+  text-transform: capitalize;
+}
+
+.menu .filter .filter-text:hover {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.menu .filter .filter-text.current {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.menu label {
+  display: block;
+  /* margin: 10px 0; */
+}
+
+.menu input,
+.menu textarea {
+  width: 100%;
+  margin: 7px 0;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+}
+
+input[type='submit'] {
+  background-color: #fff;
+}
+
+/* GALLERY ----------------- */
+
+.gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow: auto;
+}
+
+.gallery .gallery-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery .image {
+  width: calc(100% / 5);
+  padding: 0;
+  transition: all 0.5s ease-in-out;
+}
+.gallery .image span {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.gallery .image img {
+  width: 100%;
+  height: calc(100% / 4);
+  vertical-align: middle;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery .image:hover img {
+  transform: scale(1.1);
+}
+
+.gallery .image.hide {
+  width: 0;
+}
+
+/* MODAL ----------------- */
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(15px);
+  transition: all 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+  overflow: auto;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 100px rgba(0, 0, 0, 0.5));
+  cursor: pointer;
+}
+
+.modal .modal-title {
+  color: #fff;
+  margin: 20px;
+  font-size: 15pt;
+  font-size: 10pt;
+  text-transform: capitalize;
+  /* display: flex;
+  justify-content: center; */
+}
+
+@media screen and (max-width: 1100px) {
+  .menu {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 60px;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    left: 0;
+    overflow: hidden;
+
+    transition: all 0.2s ease;
+  }
+
+  .menu.show {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    overflow: auto;
+
+    backdrop-filter: blur(15px);
+  }
+
+  .menu .menu-content {
+    width: 400px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+
+    transition: all 0.2s ease;
+  }
+
+  .menu .menu-content.show {
+    top: 0;
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .menu .menu-btn {
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 9;
+  }
+
+  .modal {
+    position: absolute;
+    z-index: 9;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .gallery .image {
+    width: calc(100% / 4);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .gallery .image {
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .gallery .image {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .menu .menu-content {
+    width: 100%;
+  }
+  .gallery .image {
+    width: calc(100% / 1);
+  }
+}
