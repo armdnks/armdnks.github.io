@@ -17,7 +17,7 @@ body {
 
 .container {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -269,7 +269,7 @@ input[type='submit'] {
     height: 25px;
     display: block;
     position: absolute;
-    top: 20px;
+    top: 0;
     right: 20px;
     z-index: 9;
   }
