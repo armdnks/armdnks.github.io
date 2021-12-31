@@ -58,6 +58,7 @@ body {
   padding-bottom: 7px;
   margin: 15px 0;
   border-bottom: 1px solid #ffff;
+  text-transform: capitalize;
 }
 
 .menu .body {
@@ -108,6 +109,28 @@ body {
 
 input[type='submit'] {
   background-color: #fff;
+}
+
+.menu .footer {
+  width: 100%;
+  bottom: 30px;
+  position: absolute;
+}
+
+.menu .footer-content {
+  width: 100%;
+  display: grid;
+  margin-bottom: 10px;
+}
+
+.menu .footer a {
+  color: #fff;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.menu .footer a:hover {
+  font-weight: 600;
 }
 
 /* GALLERY ----------------- */
